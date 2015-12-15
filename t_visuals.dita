@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "http://docs.oasis-open.org/dita/v1.1/OS/dtd/task.dtd" []>
+<task id="DITA Topic Task 1">
+<title>Displaying a background image for a video game in &lt;canvas&gt;</title>
+<shortdesc>
+  This document instructs on how to load and render an image for use as a background in a video game.
+</shortdesc>
+
+<taskbody>
+<context>
+  <p>To accomplish this goal you will need to:</p>
+  <ul>
+    <li>Have a &lt;canvas&gt; element declared and called in the HTML page</li>
+    <li>Create a JavaScript file that the HTML page calls</li>
+    <li>Provide an image for the JavaScript to load</li>
+    <li>Write a function to render the image</li>
+  </ul>
+</context>
+  <steps>
+    <step>
+      <cmd>Load the image in JavaScript.</cmd>
+      <substeps>
+        <substep>
+        <cmd>Write variables for a new image and a true / false state for when the image is ready: var bgReady = false; var bgImage = new Image();</cmd>
+      </substep>
+      <substep>
+        <cmd>Write an onload function that sets the true / false state to true: bgImage.onload = function (){bgReady = true;};</cmd>
+      </substep>
+      <substep>
+        <cmd>Set a source for the Image() method: bgImage.src = "Background.png";</cmd>
+      </substep>
+      </substeps>
+    </step>
+    <step>
+    <cmd>Create and call the rendering function.</cmd>
+    <substeps>
+      <substep>
+  <cmd>Declare the function: var render = function(){</cmd>
+</substep>
+<substep>
+  <cmd>Refer to the &lt;canvas&gt; drawing context in a drawImage method: ctx.drawImage(bgImage, 0, 0);}</cmd>
+</substep>
+    </substeps>
+  </step>
+  <step>
+  <cmd>Call the rendering function within the update loop: render();</cmd>
+</step>
+</steps>
+</taskbody>
+</task>

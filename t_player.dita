@@ -1,0 +1,82 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "http://docs.oasis-open.org/dita/v1.1/OS/dtd/task.dtd" []>
+<task id="DITA Topic Task 2">
+<title>Creating a player character for a video game in &lt;canvas&gt;</title>
+<shortdesc>
+  This document instructs on how write a player character controlled by the user in a video game.
+</shortdesc>
+
+<taskbody>
+<context>
+  <p>To accomplish this goal you will need to:</p>
+  <ul>
+    <li>Have a &lt;canvas&gt; element declared and called in the HTML page</li>
+    <li>Create a JavaScript file that the HTML page calls</li>
+    <li>Load an image to represent the player character (Refer to visuals topic)</li>
+    <li>Set up an object containing variables of the player character and modify them</li>
+  </ul>
+</context>
+  <steps>
+    <step>
+      <cmd>Create an object for the player character.</cmd>
+      <substeps>
+        <substep>
+        <cmd>Write a name for the object to reference later, with an equals sign and a bracket: player = {</cmd>
+      </substep>
+      <substep>
+        <cmd>Write variables for coordinates (x, y), dimensions(width, height), vertical and horizontal velocity(xVelocity and yVelocity) and maximum speed (speed) along with a true / false state that determines if the player is jumping (isJumping), closing the bracket when finished.</cmd>
+      </substep>
+      <substep>
+        <cmd>Enable user input by writing keys = [].</cmd>
+      </substep>
+      <substep>
+        <cmd>Create variables for friction and gravity.</cmd>
+      </substep>
+      </substeps>
+    </step>
+    <step>
+    <cmd>Modify velocity variables in response to player input inside the update.</cmd>
+    <substeps>
+      <substep>
+  <cmd>Write if statements for the keys that correspond to up, left and right: if (keys[X]){</cmd>
+</substep>
+<substep>
+  <cmd>For the "up" if statement, set player.isJumping to true, set player.speed as negative and assign that value to player.yVelocity.</cmd>
+</substep>
+<substep>
+  <cmd>For the "left" if statement, write an if statement that adds 1 to player.xVelocity if it is less than player.speed.</cmd>
+</substep>
+<substep>
+  <cmd>For the "right" if statement, write an if statement that subtracts 1 from player.xVelocity if it is greater than player.speed.</cmd>
+</substep>
+    </substeps>
+  </step>
+  <step>
+  <cmd>Update the position variables based on the velocity variables.</cmd>
+  <substeps>
+    <substep>
+    <cmd>Set player.xVelocity equal to its current value multiplied by the friction variable.</cmd>
+  </substep>
+  <substep>
+    <cmd>Set player.yVelocity equal to its current value plus the gravity variable.</cmd>
+  </substep>
+  <substep>
+    <cmd>Set player.x and player.y equal to player.xVelocity and player.yVelocity.</cmd>
+  </substep>
+  <substep>
+    <cmd>Write a series of if statements checking if player.x is less than 0 or greater than the width of the canvas.</cmd>
+  </substep>
+  <substep>
+    <cmd>Set player.x equal to the width of the canvas if it exceeds that value, or set player.x to 0 if it is less than 0..</cmd>
+  </substep>
+  <substep>
+    <cmd>Write an if statement checking if player.y is less than 0.</cmd>
+  </substep>
+  <substep>
+    <cmd>Set player.isJumping to false and player.y to 0 if it is less than 0.</cmd>
+  </substep>
+  </substeps>
+</step>
+</steps>
+</taskbody>
+</task>
