@@ -1,0 +1,77 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8"><meta name="copyright" content="(C) Copyright 2015">
+<meta name="DC.rights.owner" content="(C) Copyright 2015">
+<meta name="DC.Type" content="task">
+<meta name="description" content="This document instructs on how write a player character or an enemy character in a video game."><meta name="DC.Relation" scheme="URI" content="t_character.html">
+<meta name="DC.Format" content="XHTML">
+<meta name="DC.Identifier" content="Character">
+<link rel="stylesheet" type="text/css" href="commonltr.css">
+<title>Creating an enemy character for a video game in &lt;canvas&gt;</title>
+</head>
+<body id="Character">
+<main role="main"><article role="article" aria-labelledby="ariaid-title1">
+<h1 class="title topictitle1" id="ariaid-title1">Creating an enemy character for a video game in &lt;canvas&gt;</h1>
+
+
+
+<div class="body taskbody"><p class="shortdesc">
+  This document instructs on how write a player character or an enemy character in a video game.
+</p>
+
+<section class="section context">
+  <p class="p">To accomplish this goal you will need to:</p>
+
+  <ul class="ul">
+    <li class="li">Set up an object containing variables of the player character and modify them.</li>
+
+    <li class="li">Choose to make an enemy character after setting up a character.</li>
+
+  </ul>
+
+</section>
+
+  <ol class="ol steps"><li class="li step">
+      <span class="ph cmd">Write if statements in the <a class="xref" href="c_update.html" title="The update loop enables a JavaScript application to change states over time, which is essential for most video games.">update loop.</a> to tell the enemy to turn around when it reaches an edge of the canvas.</span>
+       <ol type="a" class="ol substeps">
+        <li class="li substep">
+          <span class="ph cmd">Write a series of if statements checking if enemy.x is less than 0 or greater than the width of the canvas.</span>
+        </li>
+
+        <li class="li substep">
+          <span class="ph cmd">Set enemy.x equal to the width of the canvas if it exceeds that value, and set an enemy.faceLeft boolean value to true.</span>
+        </li>
+
+        <li class="li substep">
+          <span class="ph cmd">Set enemy.x equal to 0 if it is less than 0, and set enemy.faceLeft to false.</span>
+        </li>
+
+      </ol>
+
+    </li>
+<li class="li step">
+      <span class="ph cmd">Create a movement pattern for the enemy to walk back and forth in the update loop.</span>
+      <ol type="a" class="ol substeps">
+        <li class="li substep">
+          <span class="ph cmd">Set enemy.x equal to its current value plus its speed value to move to the right.</span>
+        </li>
+
+        <li class="li substep">
+          <span class="ph cmd">Set enemy.x equal to its current value minus its speed value to move to the left.</span>
+        </li>
+
+      </ol>
+
+    </li>
+</ol>
+
+</div>
+
+<nav role="navigation" class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="t_character.html" title="This document instructs on how write a player character or an enemy character in a video game.">Creating a character for a video game in &lt;canvas&gt;</a></div>
+</div>
+</nav></article></main></body>
+</html>

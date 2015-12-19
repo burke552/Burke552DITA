@@ -1,0 +1,77 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8"><meta name="copyright" content="(C) Copyright 2015">
+<meta name="DC.rights.owner" content="(C) Copyright 2015">
+<meta name="DC.Type" content="task">
+<meta name="description" content="This document instructs on how to load and render an image in a video game."><meta name="DC.Format" content="XHTML">
+<meta name="DC.Identifier" content="Visuals">
+<link rel="stylesheet" type="text/css" href="commonltr.css">
+<title>Displaying an image for a video game in &lt;canvas&gt;</title>
+</head>
+<body id="Visuals">
+<main role="main"><article role="article" aria-labelledby="ariaid-title1">
+<h1 class="title topictitle1" id="ariaid-title1">Displaying an image for a video game in &lt;canvas&gt;</h1>
+
+
+
+<div class="body taskbody"><p class="shortdesc">
+  This document instructs on how to load and render an image in a video game.
+</p>
+
+<section class="section context">
+  <p class="p">To accomplish this goal you will need to:</p>
+
+  <ul class="ul">
+    <li class="li"><a class="xref" href="t_prep.html" title="This document instructs on how to prepare the proper environment to write a video game with <canvas&gt; and JavaScript.">Have the &lt;canvas&gt; element and JavaScript file declared and called properly.</a></li>
+
+    <li class="li">Provide an image for the JavaScript to load.</li>
+
+    <li class="li"><a class="xref" href="r_conventionsJS.html" title="A table of some basic JavaScript writing conventions for writing variables, functions and values.">Write a function to render the image in the update loop.</a></li>
+
+  </ul>
+
+</section>
+
+  <ol class="ol steps"><li class="li step">
+      <span class="ph cmd">Load the image in JavaScript.</span>
+      <ol type="a" class="ol substeps">
+        <li class="li substep">
+        <span class="ph cmd">Write variables for a new image and a true / false state for when the image is ready.</span>
+      </li>
+
+      <li class="li substep">
+        <span class="ph cmd">Write an onload function that sets the true / false state to true.</span>
+      </li>
+
+      <li class="li substep">
+        <span class="ph cmd">Set a source for the Image() method.</span>
+      </li>
+
+      </ol>
+
+    </li>
+<li class="li step">
+    <span class="ph cmd">Create and call the rendering function.</span>
+    <ol type="a" class="ol substeps">
+      <li class="li substep">
+  <span class="ph cmd">Declare the function.</span>
+</li>
+
+<li class="li substep">
+  <span class="ph cmd">Refer to the &lt;canvas&gt; drawing context in a drawImage method.</span>
+</li>
+
+    </ol>
+
+  </li>
+<li class="li step">
+  <span class="ph cmd">Call the rendering function within the <a class="xref" href="c_update.html" title="The update loop enables a JavaScript application to change states over time, which is essential for most video games.">update loop.</a></span>
+</li>
+</ol>
+
+</div>
+
+</article></main></body>
+</html>

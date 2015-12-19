@@ -1,0 +1,104 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8"><meta name="copyright" content="(C) Copyright 2015">
+<meta name="DC.rights.owner" content="(C) Copyright 2015">
+<meta name="DC.Type" content="task">
+<meta name="description" content="This document instructs on how write a player character or an enemy character in a video game."><meta name="DC.Relation" scheme="URI" content="t_character.html">
+<meta name="DC.Format" content="XHTML">
+<meta name="DC.Identifier" content="Character">
+<link rel="stylesheet" type="text/css" href="commonltr.css">
+<title>Creating a player character for a video game in &lt;canvas&gt;</title>
+</head>
+<body id="Character">
+<main role="main"><article role="article" aria-labelledby="ariaid-title1">
+<h1 class="title topictitle1" id="ariaid-title1">Creating a player character for a video game in &lt;canvas&gt;</h1>
+
+
+
+<div class="body taskbody"><p class="shortdesc">
+  This document instructs on how write a player character or an enemy character in a video game.
+</p>
+
+<section class="section context">
+  <p class="p">To accomplish this goal you will need to:</p>
+
+  <ul class="ul">
+    <li class="li">Set up an object containing variables of the player character and modify them.</li>
+
+    <li class="li">Choose to make the player character after setting up a character.</li>
+
+  </ul>
+
+</section>
+
+  <ol class="ol steps"><li class="li step">
+      <span class="ph cmd">Enable user input by writing keys = [].</span>
+    </li>
+<li class="li step">
+      <span class="ph cmd">Modify velocity variables in response to player input inside the <a class="xref" href="c_update.html" title="The update loop enables a JavaScript application to change states over time, which is essential for most video games.">update loop.</a></span>
+        <ol type="a" class="ol substeps">
+          <li class="li substep">
+            <span class="ph cmd">Write if statements for the keys that correspond to up, left and right: if (keys[X]){</span>
+          </li>
+
+          <li class="li substep">
+            <span class="ph cmd">For the "up" if statement, set player.isJumping to true, set player.speed as negative and assign that value to player.yVelocity.</span>
+          </li>
+
+          <li class="li substep">
+            <span class="ph cmd">For the "left" if statement, write an if statement that adds 1 to player.xVelocity if it is less than player.speed.</span>
+          </li>
+
+          <li class="li substep">
+            <span class="ph cmd">For the "right" if statement, write an if statement that subtracts 1 from player.xVelocity if it is greater than player.speed.</span>
+          </li>
+
+        </ol>
+
+    </li>
+<li class="li step">
+      <span class="ph cmd">Update the position variables based on the velocity variables in the update loop.</span>
+        <ol type="a" class="ol substeps">
+          <li class="li substep">
+            <span class="ph cmd">Set player.xVelocity equal to its current value multiplied by the friction variable.</span>
+          </li>
+
+          <li class="li substep">
+            <span class="ph cmd">Set player.yVelocity equal to its current value plus the gravity variable.</span>
+          </li>
+
+          <li class="li substep">
+            <span class="ph cmd">Set player.x and player.y equal to player.xVelocity and player.yVelocity.</span>
+          </li>
+
+          <li class="li substep">
+            <span class="ph cmd">Write a series of if statements checking if player.x is less than 0 or greater than the width of the canvas.</span>
+          </li>
+
+          <li class="li substep">
+            <span class="ph cmd">Set player.x equal to the width of the canvas if it exceeds that value, or set player.x to 0 if it is less than 0..</span>
+          </li>
+
+          <li class="li substep">
+            <span class="ph cmd">Write an if statement checking if player.y is less than 0.</span>
+          </li>
+
+          <li class="li substep">
+            <span class="ph cmd">Set player.isJumping to false and player.y to 0 if it is less than 0.</span>
+          </li>
+
+        </ol>
+
+      </li>
+</ol>
+
+</div>
+
+<nav role="navigation" class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="t_character.html" title="This document instructs on how write a player character or an enemy character in a video game.">Creating a character for a video game in &lt;canvas&gt;</a></div>
+</div>
+</nav></article></main></body>
+</html>

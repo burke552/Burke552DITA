@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "http://docs.oasis-open.org/dita/v1.1/OS/dtd/task.dtd" []>
+<task id="Character">
+<title>Creating an enemy character for a video game in &lt;canvas&gt;</title>
+<shortdesc>
+  This document instructs on how write a player character or an enemy character in a video game.
+</shortdesc>
+
+<taskbody>
+<context>
+  <p>To accomplish this goal you will need to:</p>
+  <ul>
+    <li>Set up an object containing variables of the player character and modify them.</li>
+    <li>Choose to make an enemy character after setting up a character.</li>
+  </ul>
+</context>
+  <steps>
+    <step>
+      <cmd>Write if statements in the <xref href="c_update.dita">update loop.</xref> to tell the enemy to turn around when it reaches an edge of the canvas.</cmd>
+       <substeps>
+        <substep>
+          <cmd>Write a series of if statements checking if enemy.x is less than 0 or greater than the width of the canvas.</cmd>
+        </substep>
+        <substep>
+          <cmd>Set enemy.x equal to the width of the canvas if it exceeds that value, and set an enemy.faceLeft boolean value to true.</cmd>
+        </substep>
+        <substep>
+          <cmd>Set enemy.x equal to 0 if it is less than 0, and set enemy.faceLeft to false.</cmd>
+        </substep>
+      </substeps>
+    </step>
+    <step>
+      <cmd>Create a movement pattern for the enemy to walk back and forth in the update loop.</cmd>
+      <substeps>
+        <substep>
+          <cmd>Set enemy.x equal to its current value plus its speed value to move to the right.</cmd>
+        </substep>
+        <substep>
+          <cmd>Set enemy.x equal to its current value minus its speed value to move to the left.</cmd>
+        </substep>
+      </substeps>
+    </step>
+  </steps>
+</taskbody>
+</task>

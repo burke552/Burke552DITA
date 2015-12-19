@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN" "plugins/org.oasis-open.dita.v1_2/dtd/technicalContent/dtd/reference.dtd">
+<reference id="JS">
+    <title>JavaScript Conventions</title>
+    <shortdesc>A table of some basic JavaScript writing conventions for writing variables, functions and values.</shortdesc>
+    <refbody>
+        <simpletable>
+            <sthead>
+                <stentry>JavaScript element</stentry>
+                <stentry>How to write</stentry>
+            </sthead>
+						<strow>
+								<stentry>Variables</stentry>
+								<stentry>var isReady = false;</stentry>
+						</strow>
+            <strow>
+                <stentry>Functions</stentry>
+                <stentry>functionName = function(){}</stentry>
+            </strow>
+						<strow>
+								<stentry>Actions on variables</stentry>
+								<stentry>variableName.actionName = function(){}</stentry>
+						</strow>
+						<strow>
+								<stentry>Values</stentry>
+								<stentry>width = 640;</stentry>
+						</strow>
+            <strow>
+                <stentry>Character object</stentry>
+                <stentry>objectName = {}</stentry>
+            </strow>
+            <strow>
+                <stentry>Character values</stentry>
+                <stentry>width: 28, jumping: false;</stentry>
+            </strow>
+						<strow>
+								<stentry>Reference character values outside of character object</stentry>
+								<stentry>objectName.valueName;</stentry>
+						</strow>
+            <strow>
+                <stentry>Enable user input</stentry>
+                <stentry>keys = []</stentry>
+            </strow>
+            <strow>
+                <stentry>Keyboard values</stentry>
+                <stentry>keys[38] = up arrow, keys[39] = right arrow, keys[37] = left arrow, keys[32] = space</stentry>
+            </strow>
+						<strow>
+								<stentry>If statements</stentry>
+								<stentry>if (isReady){}, if (!isReady){}</stentry>
+						</strow>
+            <strow>
+                <stentry>Operations on numeric values</stentry>
+                <stentry>valueName += 7, valueName -= 2</stentry>
+            </strow>
+        </simpletable>
+    </refbody>
+</reference>

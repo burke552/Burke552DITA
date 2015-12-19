@@ -1,0 +1,61 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8"><meta name="copyright" content="(C) Copyright 2015">
+<meta name="DC.rights.owner" content="(C) Copyright 2015">
+<meta name="DC.Type" content="concept">
+<meta name="description" content="The update loop enables a JavaScript application to change states over time, which is essential for most video games."><meta name="DC.Format" content="XHTML">
+<meta name="DC.Identifier" content="update">
+<link rel="stylesheet" type="text/css" href="commonltr.css">
+<title>Update Loops in JavaScript</title>
+</head>
+<body id="update">
+<main role="main"><article role="article" aria-labelledby="ariaid-title1">
+    <h1 class="title topictitle1" id="ariaid-title1">Update Loops in JavaScript</h1>
+
+    
+    <div class="body conbody"><p class="shortdesc">The update loop enables a JavaScript application to change states over time, which is essential for most video games.</p>
+
+      <div class="p">An update loop, used in games, is JavaScript code that handles computations of game variables and draws those results to the canvas using pre-defined rendering functions.
+         This enables functionality like movement of player and enemy characters, adjustments to the states of those characters such as health and power-ups, animation of background and character images and win conditions.
+         Typically, an update loop is made up of a few parts:
+         <ul class="ul">
+           <li class="li">A function defining a variable called requestAnimationFrame set equal to one of a few window.requestAnimationFrame variables based on what browser is in use, with window.requestAnimationFrame being set to requestAnimationFrame</li>
+
+           <li class="li">A function named update that serves as the main body of code for the game, with a call of requestAnimationFrame on itself at the end</li>
+
+           <li class="li">A trio of addEventListener functions that respond to user input on the keyboard.</li>
+
+         </ul>
+</div>
+
+         <section class="section"><h2 class="title sectiontitle">requestAnimationFrame</h2>
+           
+            <p class="p">(function() { var requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
+              window.requestAnimationFrame = requestAnimationFrame;})();</p>
+
+        </section>
+
+        <section class="section"><h2 class="title sectiontitle">update()</h2>
+          
+           <p class="p">function update(){
+              requestAnimationFrame(update);}</p>
+
+       </section>
+
+       <section class="section"><h2 class="title sectiontitle">addEventListener</h2>
+        
+          <p class="p">document.body.addEventListener("keydown", function(e) {
+                keys[e.keyCode] = true;});
+             document.body.addEventListener("keyup", function(e) {
+                keys[e.keyCode] = false;});
+             window.addEventListener("load",function(){
+                update();});</p>
+
+       </section>
+
+    </div>
+
+</article></main></body>
+</html>

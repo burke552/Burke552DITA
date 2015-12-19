@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "plugins/org.oasis-open.dita.v1_2/dtd/technicalContent/dtd/concept.dtd">
+<concept id="update">
+    <title>Update Loops in JavaScript</title>
+    <shortdesc>The update loop enables a JavaScript application to change states over time, which is essential for most video games.</shortdesc>
+    <conbody>
+      <p>An update loop, used in games, is JavaScript code that handles computations of game variables and draws those results to the canvas using pre-defined rendering functions.
+         This enables functionality like movement of player and enemy characters, adjustments to the states of those characters such as health and power-ups, animation of background and character images and win conditions.
+         Typically, an update loop is made up of a few parts:
+         <ul>
+           <li>A function defining a variable called requestAnimationFrame set equal to one of a few window.requestAnimationFrame variables based on what browser is in use, with window.requestAnimationFrame being set to requestAnimationFrame</li>
+           <li>A function named update that serves as the main body of code for the game, with a call of requestAnimationFrame on itself at the end</li>
+           <li>A trio of addEventListener functions that respond to user input on the keyboard.</li>
+         </ul></p>
+         <section>
+           <title>requestAnimationFrame</title>
+            <p>(function() { var requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
+              window.requestAnimationFrame = requestAnimationFrame;})();</p>
+        </section>
+        <section>
+          <title>update()</title>
+           <p>function update(){
+              requestAnimationFrame(update);}</p>
+       </section>
+       <section>
+        <title>addEventListener</title>
+          <p>document.body.addEventListener("keydown", function(e) {
+                keys[e.keyCode] = true;});
+             document.body.addEventListener("keyup", function(e) {
+                keys[e.keyCode] = false;});
+             window.addEventListener("load",function(){
+                update();});</p>
+       </section>
+    </conbody>
+</concept>

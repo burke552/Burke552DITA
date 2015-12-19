@@ -1,15 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "http://docs.oasis-open.org/dita/v1.1/OS/dtd/map.dtd">
-<map id="DITA Topic Map">
+<map id="CanvasMap">
     <title>The &lt;canvas&gt; Element and Writing Video Games</title>
-    <topicref href="t_visuals.dita">
-      	</topicref>
-    <topicref href="t_player.dita">
-        </topicref>
-    <topicref href="t_terrain.dita">
-        </topicref>
     <topicref href="c_canvasgames_intro.dita">
 	      </topicref>
-    <topicref href="r_javascript.dita">
+    <topicref href="t_prep.dita">
+        </topicref>
+    <topicref href="t_visuals.dita">
+      	</topicref>
+    <topicref href="t_character.dita">
+    <topicref href="t_player.dita"></topicref>
+    <topicref href="t_enemy.dita"></topicref>
+        </topicref>
+    <topicref href="r_conventionsJS.dita">
+        </topicref>
+    <topicref href="r_conventionsHTML.dita">
+        </topicref>
+    <topicref href="c_update.dita">
         </topicref>
 </map>

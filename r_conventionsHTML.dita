@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN" "plugins/org.oasis-open.dita.v1_2/dtd/technicalContent/dtd/reference.dtd">
+<reference id="HTML">
+    <title>HTML Conventions</title>
+    <shortdesc>A table of some basic HTML writing conventions for writing elements and values.</shortdesc>
+    <refbody>
+        <simpletable>
+            <sthead>
+                <stentry>HTML code</stentry>
+                <stentry>How to write</stentry>
+            </sthead>
+						<strow>
+								<stentry>Element ID</stentry>
+								<stentry>&lt;canvas id="a"&gt;&lt;/canvas&gt;</stentry>
+						</strow>
+						<strow>
+								<stentry>Inline value / style</stentry>
+								<stentry>&lt;canvas width="640" height="480"&gt;&lt;/canvas&gt;</stentry>
+						</strow>
+            <strow>
+                <stentry>External source file</stentry>
+                <stentry>&lt;script src="game.js"&gt;&lt;/canvas&gt;</stentry>
+            </strow>
+        </simpletable>
+    </refbody>
+</reference>

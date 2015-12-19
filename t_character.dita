@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "http://docs.oasis-open.org/dita/v1.1/OS/dtd/task.dtd" []>
+<task id="Character">
+<title>Creating a character for a video game in &lt;canvas&gt;</title>
+<shortdesc>
+  This document instructs on how write a player character or an enemy character in a video game.
+</shortdesc>
+
+<taskbody>
+<context>
+  <p>To accomplish this goal you will need to:</p>
+  <ul>
+    <li><xref href="t_prep.dita">Have the &lt;canvas&gt; element and JavaScript file declared and called properly.</xref></li>
+    <li><xref href="t_visuals.dita">Load an image to represent the character.</xref></li>
+    <li><xref href="r_conventionsJS.dita">Set up an object containing variables of the character and modify them.</xref></li>
+  </ul>
+</context>
+  <steps>
+    <step>
+     <cmd>Create an object for the character.</cmd>
+      <substeps>
+        <substep>
+          <cmd>Write a name for the object to reference later, with an equals sign and a bracket.</cmd>
+        </substep>
+        <substep>
+          <cmd>Write variables for coordinates (x, y), dimensions(width, height), vertical and horizontal velocity(xVelocity and yVelocity) and maximum speed (speed) along with a true / false state that determines if the player is jumping (isJumping), closing the bracket when finished.</cmd>
+        </substep>
+        <substep>
+          <cmd>Create variables for friction and gravity.</cmd>
+        </substep>
+        </substeps>
+    </step>
+    <step>
+      <cmd>Choose between designing a player character and an enemy character.</cmd>
+        <choicetable>
+          <chhead>
+            <choptionhd>Character Type</choptionhd>
+            <chdeschd>How to write</chdeschd>
+          </chhead>
+          <chrow><choption>Player character</choption>
+            <chdesc><xref href="t_player.dita">Follow this task to enable user input.</xref></chdesc></chrow>
+          <chrow><choption>Enemy character</choption>
+              <chdesc><xref href="t_enemy.dita">Follow this task to create enemy movement routine.</xref></chdesc></chrow>
+        </choicetable>
+    </step>
+</steps>
+</taskbody>
+</task>
